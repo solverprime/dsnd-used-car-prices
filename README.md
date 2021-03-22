@@ -2,7 +2,9 @@
 The main purpose of this project is to tease out how the price of used cars is driven by its features, such as its vintage year, its odometer reading etc. 
 We build a model to predict the price of a car based on its features. The predicted price can be compared to the listed price of a new car to determine whether it is overpriced or underpriced.
 This repo contains [Craiglist's Used Cars]( https://www.kaggle.com/austinreese/craigslist-carstrucks-data) dataset.
-See the blog post [here](https://medium.com/p/88a1215122c3/edit).
+
+# Blog post
+See the blog post on [Medium](https://witty-latte-bat-528.medium.com/what-drives-the-pricing-of-used-cars-88a1215122c3).
 
 # Installation
 The notebook uses Python Python 3.7.10. 
