@@ -1,5 +1,6 @@
 # Used Car Analysis
 The main purpose of this project is to tease out how the price of used cars is driven by its features, such as its vintage year, its odometer reading etc. We build a model to predict the price of a car based on its features. The predicted price can be compared to the listed price of a new car to determine whether it is overpriced or underpriced.
+
 This repo contains [Craiglist's Used Cars]( https://www.kaggle.com/austinreese/craigslist-carstrucks-data) dataset.
 
 # Blog post
@@ -14,13 +15,14 @@ The notebook uses Python Python 3.7.10. The following libraries are used within
 * google==2.0.3
 * missingno==0.4.2
 * matplotlib==3.2.2
+
 The notebook is organized into chapters. The main sections are loading and cleaning data and then building and predicting car prices using a linear regression model.
 
 # Business Understanding
 The dataset is a very large database of used cars available for sale that provides not just the price but also important attributes of each car: manufacturer, mileage, type of car etc. This dataset is large enough to make useful models on how used cars are priced and gain important insights of how each of the car's attributes impact its price. 
 
 # Data Understanding
-The  [Craiglist's Used Cars]( https://www.kaggle.com/austinreese/craigslist-carstrucks-data) dataset contains relevant information on car sales on Craigslist. The dataset contains 458,213 cars and 24 columns about each listing. The main column of interest is the price of a car that we model in this analysis. Other relevant numerical columns include year and odometer reading of the car. Relevant categorical columns include manufacturer, condition, cylinders etc.
+The [Craiglist's Used Cars]( https://www.kaggle.com/austinreese/craigslist-carstrucks-data) dataset contains relevant information on car sales on Craigslist. The dataset contains 458,213 cars and 24 columns about each listing. The main column of interest is the price of a car that we model in this analysis. Other relevant numerical columns include year and odometer reading of the car. Relevant categorical columns include manufacturer, condition, cylinders etc.
 
 # Prepare Data
 Data cleaning is done in several stages, as described in the Jupyter Notebook of this repo.
@@ -31,10 +33,12 @@ Besides filtering out bad data, data that is considered as outliers is filtered 
 2. There are a significant number of cars from the 1960s, 1970s etc. eras which are although "used cars" fall more in the category of "vintage cars" and more useful as "collectors items" for buyers rather for daily usage. They are less important and in fact make modeling of **used car** prices less effective as these vintage cars are often priced very differently (they increase in value the older they are opposed to decreasing prices of used cars). For example, we have a 1972 Ferrari 246 GT Dino listed for $389,500 which makes it more a collector's item rather than a typical used car.
 
 # Data Modeling
-I have used LinearRegression and test_and_split methods and used R-squared as the metric to maximize and find the optimal fit. The best model yields a very consistent 75.025% fit on test for a 75.095% R-squared on the training data. Further improvements in the fit can be achieved by splitting data by manufacturer, category (cylinders and type) of cars.   
+I have used LinearRegression and test_and_split methods and used R-squared as the metric to maximize and find the optimal fit. The best model yields a very consistent 75.03% fit on test for a 75.10% R-squared on the training data. Further improvements in the fit can be achieved by splitting data by manufacturer, category (cylinders and type) of cars.   
 
 # Files Description
-The files included in this project are: * Use_car_price_prediction.ipynb - Jupyter Notebook including the main project code. * vehicles.csv - used cars dataset
+The files included in this project are: 
+* Use_car_price_prediction.ipynb - Jupyter Notebook including the main project code.
+* vehicles.csv - used cars dataset
 
 # Key Observations
 1. The price of a car decreases by $ 912.8 each year, given that all other factors remain the same
